@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,55 @@
 </head>
 <body class="bg-slate-100">
     
+    <!-- Navbar Start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 px-12">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#" class="font-bold text-xl text-red-500 block py-6">My Restaurant</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-64 w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none ">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="" class="text-base text-slate-800 py-2 mx-8 flex group-hover:text-red-500">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about" class="text-base text-slate-800 py-2 mx-8 flex group-hover:text-red-500">About</a>
+                            </li>
+                            <li class="group">
+                                <a href="#menu" class="text-base text-slate-800 py-2 mx-8 flex group-hover:text-red-500">Menu</a>
+                            </li>
+                            <li class="group">
+                                <a href="#" class="text-base text-slate-800 py-2 mx-8 flex group-hover:text-red-500">Gallery</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact" class="text-base text-slate-800 py-2 mx-8 flex group-hover:text-red-500">Contact</a>
+                            </li>
+                            <li class="group">
+                                <div class="bg-blue-500 w-36 ml-7 px-3 py-2 rounded-lg hover:bg-blue-600 lg:ml-0">
+                                    <a href="#" class="text-base text-white hover:text-slate-200 hover:underline">Login</a>
+                                    <span class="text-white">/</span>
+                                    <a href="#" class="text-base text-white hover:text-slate-200 hover:underline">Register</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar End -->
+
     <!-- HERO Start -->
-     <header class="container max-w-full h-[500px] mt-5 bg-slate-200 px-6 shadow-md lg:px-10">
+    <div class="container max-w-full h-[500px] mt-20 lg:mt-[80px] bg-slate-200 px-6 shadow-md lg:px-10">
         <div class="text-center lg:flex lg:text-start lg:items-center">
             <div>
                 <h2 class="text-3xl font-bold mb-2 lg:text-5xl">Discover Restaurant & Delicious Food</h2>
@@ -22,7 +69,7 @@
                 <img src="./public/img/burger.png" alt="Hero">
             </div>
         </div>
-     </header>
+    </div>
     <!-- HERO End -->
 
     <div class="container px-6 mt-10 text-center lg:text-start lg:px-32 lg:flex">
@@ -36,11 +83,10 @@
     </div>
 
     <!-- Main Content Start -->
-
-    <main class="container px-6 mt-10 lg:px-10">
+    <main class="container mt-10">
         
         <!-- About Section Start -->
-         <div class="lg:flex">
+         <div id="about" class="px-6 lg:flex lg:px-12">
             <div class="lg:w-1/2 mb-2">
                 <h2 class="text-3xl text-center font-bold font-serif mb-2 lg:text-start">About Restaurant</h2>
                 <p class="font-light text-base text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatibus architecto! Atque placeat, omnis reprehenderit iste vel animi repellendus fugiat consequatur vitae totam architecto vero veniam corporis eum eius possimus nobis. Deleniti, veniam unde, repellat quae laudantium fugiat quo exercitationem, aut atque neque porro. Minus asperiores esse a id doloribus!</p>
@@ -52,7 +98,7 @@
         <!-- About Section End -->
 
         <!-- Why Choose Us Start -->
-        <div class="container mt-20">
+        <div class="container px-6 mt-20 lg:px-12">
             <div class="text-center">   
                 <h3 class="font-thin text-xl mb-2">Why Choose Us?</h3>
                 <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias veniam unde ea iusto quidem!</p>
@@ -83,7 +129,7 @@
         <!-- Why Choose Us End -->
 
         <!-- Our Menu Start -->
-        <div class="container mt-20">
+        <div id="menu" class="container px-6 mt-20 lg:px-12">
             <div class="text-center">
                 <h3 class="font-thin text-xl mb-2">Our Menu's</h3>
                 <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias veniam unde ea iusto quidem!</p>
@@ -114,7 +160,7 @@
         <!-- Our Menu End -->
 
         <!-- Reason Start -->
-        <div class="container mt-20 lg:flex">
+        <div class="container px-6 mt-20 lg:flex lg:px-12">
             <div class="lg:w-1/2 text-center lg:text-start lg:my-auto lg:items-center">
                 <h3 class="text-4xl font-semibold">Discover the</h3>
                 <h3 class="text-4xl font-semibold">True Meaning of</h3>
@@ -129,7 +175,7 @@
         <!-- Reason End -->
 
         <!-- Chef Start -->
-        <div class="container mt-20">
+        <div class="container px-6 mt-20 lg:px-12">
             <div class="text-center">
                 <h3 class="font-thin text-xl mb-2">Our Chef</h3>
                 <h3 class="text-4xl mb-2 font-semibold">Meet Our Chef</h3>
@@ -140,7 +186,7 @@
                     <img src="./public/img/chef/1.jpg" alt="Chef 1" width="250px" height="250px">
                     <h4 class="text-xl text-red-500 font-serif mt-3">Michael Gordon</h4>
                     <p class="text-base font-serif">Head Chef</p>
-                    <span class="bg-black border-2 w-10 block my-3"></span>
+                    <span class="border-2 border-black w-10 block my-3"></span>
                     <div class="flex">
                         <li class="list-none mx-1 bg-amber-500 w-8 h-8 flex rounded-md cursor-pointer"><img src="./public/img/icon/facebook.png" width="25px" alt="facebook" class="m-auto"></li>
                         <li class="list-none mx-1 bg-amber-500 w-8 h-8 flex rounded-md cursor-pointer"><img src="./public/img/icon/instagram.png" width="25px" alt="instagram" class="m-auto"></li>
@@ -151,7 +197,7 @@
                     <img src="./public/img/chef/2.jpg" alt="Chef 1" width="250px" height="250px">
                     <h4 class="text-xl text-red-500 font-serif mt-3">Francisca Veronika</h4>
                     <p class="text-base font-serif">Head Chef</p>
-                    <span class="bg-black border-2 w-10 block my-3"></span>
+                    <span class="border-black border-2 w-10 block my-3"></span>
                     <div class="flex">
                         <li class="list-none mx-1 bg-amber-500 w-8 h-8 flex rounded-md cursor-pointer"><img src="./public/img/icon/facebook.png" width="25px" alt="facebook" class="m-auto"></li>
                         <li class="list-none mx-1 bg-amber-500 w-8 h-8 flex rounded-md cursor-pointer"><img src="./public/img/icon/instagram.png" width="25px" alt="instagram" class="m-auto"></li>
@@ -162,7 +208,7 @@
                     <img src="./public/img/chef/3.jpg" alt="Chef 1" width="250px" height="250px">
                     <h4 class="text-xl text-red-500 font-serif mt-3">Joseph Calvin</h4>
                     <p class="text-base font-serif">Head Chef</p>
-                    <span class="bg-black border-2 w-10 block my-3"></span>
+                    <span class="border-black border-2 w-10 block my-3"></span>
                     <div class="flex">
                         <li class="list-none mx-1 bg-amber-500 w-8 h-8 flex rounded-md cursor-pointer"><img src="./public/img/icon/facebook.png" width="25px" alt="facebook" class="m-auto"></li>
                         <li class="list-none mx-1 bg-amber-500 w-8 h-8 flex rounded-md cursor-pointer"><img src="./public/img/icon/instagram.png" width="25px" alt="instagram" class="m-auto"></li>
@@ -173,11 +219,130 @@
         </div>
         <!-- Chef End -->
 
-    </main>
+        <!-- Testimoni Start -->
+        <div class="container w-full mt-20 bg-red-500 h-[800px] lg:h-[500px] flex flex-col items-center justify-center shadow-lg">
+            <div class="px-6 lg:px-12">
+                <div class="text-center text-white">
+                    <h3 class="font-thin text-xl mb-2">Testimony</h3>
+                    <h3 class="text-2xl mb-2 font-semibold lg:text-4xl">What Our Customer Say?</h3>
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias veniam unde ea iusto quidem!</p>
+                </div>
+                <section class="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="text-center text-white mb-3">
+                        <img src="./public/img/Testimoni/1.png" alt="Testimoni 1" width="65px" height="60px" class="rounded-full border-4 border-teal-500 bg-white  bg-cover mb-1 shadow-xl m-auto">
+                        <p class="font-light text-sm">Marisca Stanley</p>
+                        <blockquote class="text-sm font-thin tracking-wider"><span class="font-bold text-2xl">"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem numquam enim illo totam aliquid saepe eligendi similique nulla. <span class="font-bold text-3xl ml-1">"</span></blockquote>
+                    </div>
+                    <div class="text-center text-white mb-3">
+                        <img src="./public/img/Testimoni/2.png" alt="Testimoni 1" width="65px" height="60px" class="rounded-full border-4 border-teal-500 bg-white  bg-cover mb-1 shadow-xl m-auto">
+                        <p class="font-light text-sm">Jack Wider</p>
+                        <blockquote class="text-sm font-thin tracking-wider"><span class="font-bold text-2xl">"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem numquam enim illo totam aliquid saepe eligendi similique nulla. <span class="font-bold text-3xl ml-1">"</span></blockquote>
+                    </div>
+                    <div class="text-center text-white mb-3">
+                        <img src="./public/img/Testimoni/3.png" alt="Testimoni 1" width="65px" height="60px" class="rounded-full border-4 border-teal-500 bg-white  bg-cover mb-1 shadow-xl m-auto">
+                        <p class="font-light text-sm">Jason McMany</p>
+                        <blockquote class="text-sm font-thin tracking-wider"><span class="font-bold text-2xl">"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem numquam enim illo totam aliquid saepe eligendi similique nulla. <span class="font-bold text-3xl ml-1">"</span></blockquote>
+                    </div>
+                </section>
+            </div>
+           
+        </div>
+        <!-- Testimoni End -->
 
+        <!-- Contact Us Start -->
+        <div id="contact" class="container px-6 lg:px-24 mt-20">
+            <div class="text-center mb-4">
+                <h3 class="font-thin text-xl mb-2">Contact Us</h3>
+                <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias veniam unde ea iusto quidem!</p>
+            </div>
+            <div class="grid lg:grid-cols-2 md:grid-cols-2">
+                <div class="lg:mr-3">
+                    <form action="">
+                        <label for="nama">
+                            <span class="block font-semibold text-slate-700 mb-1">Name</span>
+                        </label>
+                        <input type="text" id="nama" placeholder="input your name..." class="px-2 py-1 border shadow rounded w-full block placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 mb-3">
+    
+                        <label for="email">
+                            <span class="block font-semibold text-slate-700 mb-1 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
+                        </label>
+                        <input type="email" id="email" placeholder="Email" class="px-2 py-1 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer">
+                        <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid!</p>
+    
+                        <label for="phone">
+                            <span class="block font-semibold text-slate-700 mb-1 ">Phone</span>
+                        </label>
+                        <input type="number" id="phone" placeholder="phone" class="px-2 py-1 border shadow rounded w-full block placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 mb-3" required>
+    
+                        <label for="perihal"></label>
+                            <span class="block font-semibold text-slate-700 mb-1">Subject</span>
+                        </label>
+                        <input type="text" id="perihal" class="px-2 py-1 border shadow rounded w-full block placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 mb-3">
+    
+                        <label for="pesan"></label>
+                            <span class="block font-semibold text-slate-700 mb-1">Message</span>
+                        </label>
+                        <textarea name="pesan" id="pesan" rows="5" class="border shadow rounded w-full block placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 mb-3"></textarea>
+    
+                        <button class="my-2 w-full py-3 bg-blue-600 rounded-lg text-white font-medium hover:bg-blue-700">Send Message!</button>
+                    </form>
+                </div>
+                <div>
+                    <img src="./public/img/contact.png" width="550px" height="500px" alt="contact us">
+                </div>
+            </div>
+        </div>
+        <!-- Contact Us End -->
+
+    </main>
     <!-- Main Content End -->
 
-    <div class="h-96"></div>
+    <!-- Footer Start -->
+    <footer class="bg-slate-800 mt-20 w-full h-[680px] text-slate-100 px-6 text-center grid md:grid-cols-2 lg:grid-cols-4 place-items-center lg:h-72">
+        <div class="lg:text-start font-serif">
+            <h2 class="text-xl font-semibold mb-2">My Restaurant</h2>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque soluta tenetur perferendis. Labore alias numquam optio at nostrum ipsa ducimus nam id, commodi quis adipisci!</p>
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2">Our Social</h2>
+            <ul class="grid grid-cols-2 gap-2 lg:grid-cols-none">
+                <li class="inline">
+                    <img src="./public/img/icon/facebook.png" alt="FB" class="inline w-4">
+                    <a href="http://www.facebook.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/instagram.png" alt="IG" class="inline w-4">
+                    <a href="http://www.instagram.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/twitter.png" alt="Twitter" class="inline w-4">
+                    <a href="http://www.twitter.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/tiktok.png" alt="Tiktok" class="inline w-4">
+                    <a href="http://www.tiktok.com" class="text-sm">My Restaurant</a>
+                </li>
+            </ul>     
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2">Quick Links</h2>
+            <ul class="grid grid-cols-2 gap-2 lg:grid-cols-none">
+                <li><a href="#" class="text-sm hover:text-red-500">Home</a></li>
+                <li><a href="#about" class="text-sm hover:text-red-500">About</a></li>
+                <li><a href="#menu" class="text-sm hover:text-red-500">Menu</a></li>
+                <li><a href="#" class="text-sm hover:text-red-500">Gallery</a></li>
+                <li><a href="#contact" class="text-sm hover:text-red-500">Contact</a></li>
+            </ul>
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2 lg:text-start">Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1990.509305351088!2d102.2763523930264!3d-3.806055306065295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e36b00c80e634df%3A0x99d9d1ad07a8faab!2sNusa%20Indah%2C%20Kec.%20Ratu%20Agung%2C%20Kota%20Bengkulu%2C%20Bengkulu!5e0!3m2!1sid!2sid!4v1727091062899!5m2!1sid!2sid" width="270" height="140" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+    <script src="./public/js/script.js"></script>
 
 </body>
 </html>
