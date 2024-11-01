@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./public/css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="w-full h-screen flex justify-center items-center bg-gray-100">
+
+        <!-- Bagian kiri login -->
+        <div class="w-1/2 hidden h-full md:flex flex-col justify-center items-center bg-red-500 text-white">
+            <h1 class="text-4xl font-bold mb-4">Welcome Back</h1>
+            <p class="text-lg text-center px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                error
+                eum provident impedit consequatur suscipit?</p>
+        </div>
+
+        <!-- Bagian Kanan Login -->
+        <div class="w-full md:w-1/2 h-full flex flex-col justify-center px-4 items-center bg-slate-100">
+            <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+                <h1 class="text-3xl font-semibold mb-4">Login</h1>
+                <p class="mb-6 text-sm">Welcome back, please login to your account!</p>
+                <form action="">
+                    <div class="mb-4">
+                        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                        <input type="text" id="username"
+                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" required>
+                    </div>
+                    <div class="mb-4 relative">
+                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="password"
+                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" required>
+                        <button type="button" id="togglePassword"
+                            class="absolute inset-y-0 right-3 top-6 flex items-center text-gray-500">
+                            <img src="./public/img/icon/eye-hide.png" id="eyeIcon" class="w-6 h-6"
+                                alt="Toggle Password Visibility">
+                        </button>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-red-500 text-white font-bold py-2 rounded hover:bg-red-600 transition duration-200">Login</button>
+
+                    <!-- Divider with text -->
+                    <div class="flex items-center my-4 font-inter">
+                        <hr class="flex-1 border-gray-300">
+                        <span class="mx-2 text-gray-600">Or continue with</span>
+                        <hr class="flex-1 border-gray-300">
+                    </div>
+
+                    <!-- Social Login Options -->
+                    <div class="mt-4 flex flex-col-2 gap-2 font-inter">
+                        <a href="#"
+                            class="flex items-center justify-center w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition duration-200">
+                            <img src="./public/img/icon/facebook.png" width="25px" alt="google" class="mr-2"></img>
+                            Facebook
+                        </a>
+                        <a href="#"
+                            class="flex items-center justify-center w-full bg-white text-slate-600 font-semibold py-2 rounded border border-slate-500 hover:bg-slate-100 transition duration-200">
+                            <img src="./public/img/icon/google.png" width="25px" alt="google" class="mr-2"></img> Google
+                        </a>
+                    </div>
+
+                    <p class="mt-4 text-center">Don't have an account? <a href="./register.html"
+                            class="text-red-500 hover:underline">Register</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Logika untuk Toggle Password Visibility
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        togglePassword.addEventListener('click', () => {
+            // Toggle tipe input antara "password" dan "text"
+            const isPasswordVisible = passwordInput.type === 'password';
+            passwordInput.type = isPasswordVisible ? 'text' : 'password';
+
+            // Ubah ikon mata antara "eye" dan "eye-off"
+            eyeIcon.src = isPasswordVisible ? './public/img/icon/eye-on.png' : './public/img/icon/eye-hide.png';
+        });
+
+    </script>
+
+</body>
+
+</html>
