@@ -36,15 +36,41 @@
                     <!-- Cart for mobile & hidden on desktop -->
                     <ul class="block mr-5 lg:hidden">
                         <li class="group relative">
-                            <a href="#cart"
+                            <button id="cartMobile" href="#cart" onclick="toggleCartMobile()"
                                 class="text-base text-slate-800 py-2 mx-8 flex items-center group-hover:text-red-500">
                                 <img src="./public/img/icon/bag.png" alt="" class="w-6 h-6 mr-2">
                                 <!-- Badge untuk jumlah barang -->
                                 <span
                                     class="absolute top-0 right-0 mt-1 mr-7 bg-red-500 text-white text-xs font-semibold rounded-full px-1.5 py-0.5">3</span>
-                            </a>
+                                </>
                         </li>
                     </ul>
+
+                    <!-- Cart Dropdown Mobile -->
+                    <div class="relative">
+                        <div id="cartDropdownMobile"
+                            class="hidden absolute right-0 top-8 mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg font-inter z-10">
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold text-gray-800">Keranjang Belanja</h3>
+                                <ul class="mt-4 space-y-3">
+                                    <li class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <img src="./public/img/nasgor.png" alt="Item Image"
+                                                class="w-full h-14 mr-3 rounded-md">
+                                            <span class="text-gray-700">Nasi Goreng</span>
+                                        </div>
+                                        <span class="text-gray-600">Rp 50.000</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-8 flex justify-between items-center">
+                                    <span class="text-lg font-semibold text-gray-800">Total: Rp 125.000</span>
+                                    <a href="#checkout"
+                                        class="text-white bg-red-500 px-3 py-1 rounded-md hover:bg-red-600">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <!-- Nav Menu -->
                     <nav id="nav-menu"
@@ -87,25 +113,58 @@
                                 </a>
                             </li>
                             <li class="group relative hidden lg:block">
-                                <a href="#cart"
+                                <button id="cartDesktop" onclick="toggleCartDesktop()"
                                     class="text-base text-slate-800 py-2 mx-8 flex items-center group-hover:text-red-500">
                                     <img src="./public/img/icon/bag.png" alt="" class="w-6 h-6 mr-2">
                                     <!-- Badge untuk jumlah barang -->
                                     <span
                                         class="absolute top-0 right-0 mt-1 mr-7 bg-red-500 text-white text-xs font-semibold rounded-full px-1.5 py-0.5">3</span>
-                                </a>
+                                    </>
                             </li>
                             <li class="group">
-                                <a href=""
+                                <button
                                     class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
                                     Login
                                     <!-- Background kecil di hover -->
                                     <span
                                         class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
-                                </a>
+                                    </>
                             </li>
                         </ul>
                     </nav>
+
+                    <!-- Cart Dropdown Desktop -->
+                    <div class="relative">
+                        <div id="cartDropdownDesktop"
+                            class="hidden absolute right-0 top-8 mt-2 w-96 bg-white border border-gray-200 rounded-lg shadow-lg font-inter z-10">
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold text-gray-800">Keranjang Belanja</h3>
+                                <ul class="mt-6 space-y-3">
+                                    <li class="flex items-center mb-4 justify-around">
+                                        <div class="flex items-center">
+                                            <img src="./public/img/nasgor.png" alt="Item Image"
+                                                class="w-full h-14 mr-3 rounded-md">
+                                            <span class="text-gray-700">Nasi Goreng</span>
+                                        </div>
+                                        <span class="text-gray-600">Rp 50.000</span>
+                                    </li>
+                                    <li class="flex items-center mb-3 justify-around">
+                                        <div class="flex items-center">
+                                            <img src="./public/img/nasgor.png" alt="Item Image"
+                                                class="w-full h-14 mr-3 rounded-md">
+                                            <span class="text-gray-700">Nasi Goreng</span>
+                                        </div>
+                                        <span class="text-gray-600">Rp 50.000</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-8 flex justify-between items-center">
+                                    <span class="text-lg font-semibold text-gray-800">Total: Rp 125.000</span>
+                                    <a href="#checkout"
+                                        class="text-white bg-red-500 px-3 py-1 rounded-md hover:bg-red-600">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -289,6 +348,49 @@
         </div>
     </footer>
     <!-- Footer End -->
+
+
+    <script src="./public/js/script.js"></script>
+    <script>
+        function toggleCartMobile() {
+            const cartDropdown = document.getElementById("cartDropdownMobile");
+            cartDropdown.classList.toggle("hidden");
+        }
+
+        function toggleCartDesktop() {
+            const cartDropdown = document.getElementById("cartDropdownDesktop");
+            cartDropdown.classList.toggle("hidden");
+        }
+
+        // Optional: Close the dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+            const cartDropdownMobile = document.getElementById("cartDropdownMobile");
+            const cartDropdownDesktop = document.getElementById("cartDropdownDesktop");
+            const cartIconMobile = document.querySelector('button#cartMobile');
+            const cartIconDesktop = document.querySelector('button#cartDesktop');
+
+            // Tutup dropdown jika klik di luar elemen cart di mobile
+            if (
+                cartDropdownMobile &&
+                !cartDropdownMobile.classList.contains("hidden") &&
+                !cartDropdownMobile.contains(event.target) &&
+                (!cartIconMobile || !cartIconMobile.contains(event.target))
+            ) {
+                cartDropdownMobile.classList.add("hidden");
+            }
+
+            // Tutup dropdown jika klik di luar elemen cart di desktop
+            if (
+                cartDropdownDesktop &&
+                !cartDropdownDesktop.classList.contains("hidden") &&
+                !cartDropdownDesktop.contains(event.target) &&
+                (!cartIconDesktop || !cartIconDesktop.contains(event.target))
+            ) {
+                cartDropdownDesktop.classList.add("hidden");
+            }
+        });
+
+    </script>
 
 </body>
 
