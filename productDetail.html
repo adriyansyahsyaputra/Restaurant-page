@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>Detail</title>
 
     <link rel="stylesheet" href="./public/css/style.css">
 
@@ -14,10 +14,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-
 </head>
 
-<body class="bg-slate-100">
+<body>
 
     <!-- Navbar Start -->
     <header class="bg-transparent font-inter absolute top-0 left-0 w-full flex items-center z-10 lg:px-12">
@@ -91,29 +90,31 @@
     </header>
     <!-- Navbar End -->
 
-
-    <!-- Main Content Start -->
-    <main class="container my-20 px-6 md:px-14">
-
-        <div class="container flex justify-between items-center font-inter mt-28">
-            <div>
-                <h1 class="text-xl md:text-2xl font-semibold">Keranjang Belanja</h1>
-            </div>
-            <div>
-                <input type="text" placeholder="Search..."
-                    class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-300">
+    <main class="container mt-28">
+        <div class="px-4 md:px-12">
+            <div class="w-full mx-auto p-6 bg-red-100 rounded-lg shadow-md flex flex-col md:flex-row font-inter">
+                <img src="./public/img/burger.png" alt="Product 1"
+                    class="w-full md:w-60 h-60 object-cover rounded-lg">
+                <div class="mt-4 md:mt-0 md:ml-6 flex flex-col justify-between">
+                    <h2 class="text-xl md:text-2xl font-semibold text-gray-800">Tteokbokki</h2>
+                    <p class="text-sm md:text-base text-gray-700 mt-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quia minima adipisci ea facere
+                        architecto
+                        itaque ipsa ex amet ipsum?
+                    </p>
+                    <div class="mt-3 text-gray-700 text-sm md:text-base">
+                        <p>4.6 (255)</p>
+                        <p class="mt-1 font-semibold md:text-lg">Rp 50,000</p>
+                        <p class="mt-1 font-semibold">Sisa barang: 10</p>
+                    </div>
+                    <button type="button"
+                        class="bg-red-500 px-4 py-2 mt-4 rounded-xl shadow-md text-white font-medium hover:bg-red-600">
+                        Add to Cart!
+                    </button>
+                </div>
             </div>
         </div>
-
-        <div class="mt-10">
-            <div class="w-full">
-                
-            </div>
-        </div>
-
     </main>
-    <!-- Main Content End -->
-
 
     <!-- Footer Start -->
     <footer
