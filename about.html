@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./public/css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-slate-100">
+
+    <!-- Navbar Start -->
+    <header class="bg-transparent font-inter absolute top-0 left-0 w-full flex items-center z-10 lg:px-12">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#" class="font-bold text-xl text-red-500 block py-6">My Restaurant</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <!-- Cart for mobile & hidden on desktop -->
+                    <ul class="block mr-5 lg:hidden">
+                        <li class="group relative">
+                            <a href="#cart"
+                                class="text-base text-slate-800 py-2 mx-8 flex items-center group-hover:text-red-500">
+                                <img src="./public/img/icon/bag.png" alt="" class="w-6 h-6 mr-2">
+                                <!-- Badge untuk jumlah barang -->
+                                <span
+                                    class="absolute top-0 right-0 mt-1 mr-7 bg-red-500 text-white text-xs font-semibold rounded-full px-1.5 py-0.5">3</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Nav Menu -->
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-64 w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    Home
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    Menu
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    About
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    Contact
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                            <li class="group relative hidden lg:block">
+                                <a href="#cart"
+                                    class="text-base text-slate-800 py-2 mx-8 flex items-center group-hover:text-red-500">
+                                    <img src="./public/img/icon/bag.png" alt="" class="w-6 h-6 mr-2">
+                                    <!-- Badge untuk jumlah barang -->
+                                    <span
+                                        class="absolute top-0 right-0 mt-1 mr-7 bg-red-500 text-white text-xs font-semibold rounded-full px-1.5 py-0.5">3</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    Login
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Section - Improved responsiveness -->
+    <div class="relative bg-red-500 text-white mt-20 h-96">
+        <div class="absolute inset-0">
+            <img src="./public/img/contact.jpg" alt="Contact Hero" class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="relative max-w-7xl mx-auto py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">About Us</h1>
+                <p
+                    class="text-base sm:text-lg md:text-xl max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto text-blue-100 px-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat excepturi quo mollitia, corrupti
+                    minus beatae assumenda laborum eius esse tempore?
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-blue-600">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Experience World Cuisine</h2>
+            <p class="text-white text-lg mb-6">
+                Make your reservation today and indulge in an unforgettable dining experience at Sajian du Monde.
+            </p>
+            <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+                Reserve Your Table
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer
+        class="bg-slate-800 mt-20 w-full h-[680px] text-slate-100 px-6 text-center grid md:grid-cols-2 lg:grid-cols-4 place-items-center lg:h-72 font-inter">
+        <div class="lg:text-start font-serif">
+            <h2 class="text-xl font-semibold mb-2">My Restaurant</h2>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque soluta tenetur
+                perferendis. Labore alias numquam optio at nostrum ipsa ducimus nam id, commodi quis adipisci!</p>
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2">Our Social</h2>
+            <ul class="grid grid-cols-2 gap-2 lg:grid-cols-none">
+                <li class="inline">
+                    <img src="./public/img/icon/facebook.png" alt="FB" class="inline w-4">
+                    <a href="http://www.facebook.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/instagram.png" alt="IG" class="inline w-4">
+                    <a href="http://www.instagram.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/twitter.png" alt="Twitter" class="inline w-4">
+                    <a href="http://www.twitter.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/tiktok.png" alt="Tiktok" class="inline w-4">
+                    <a href="http://www.tiktok.com" class="text-sm">My Restaurant</a>
+                </li>
+            </ul>
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2">Quick Links</h2>
+            <ul class="grid grid-cols-2 gap-2 lg:grid-cols-none">
+                <li><a href="#" class="text-sm hover:text-red-500">Home</a></li>
+                <li><a href="#about" class="text-sm hover:text-red-500">About</a></li>
+                <li><a href="#menu" class="text-sm hover:text-red-500">Menu</a></li>
+                <li><a href="#" class="text-sm hover:text-red-500">Gallery</a></li>
+                <li><a href="#contact" class="text-sm hover:text-red-500">Contact</a></li>
+            </ul>
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2 lg:text-start">Location</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1990.509305351088!2d102.2763523930264!3d-3.806055306065295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e36b00c80e634df%3A0x99d9d1ad07a8faab!2sNusa%20Indah%2C%20Kec.%20Ratu%20Agung%2C%20Kota%20Bengkulu%2C%20Bengkulu!5e0!3m2!1sid!2sid!4v1727091062899!5m2!1sid!2sid"
+                width="270" height="140" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+    <script src="./public/js/script.js"></script>
+</body>
+
+</html>
