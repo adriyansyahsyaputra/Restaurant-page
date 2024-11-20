@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./public/css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-slate-100">
+
+    <!-- Navbar Start -->
+    <header class="bg-transparent font-inter absolute top-0 left-0 w-full flex items-center z-10 lg:px-12">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#" class="font-bold text-xl text-red-500 block py-6">My Restaurant</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <!-- Cart for mobile & hidden on desktop -->
+                    <ul class="block mr-5 lg:hidden">
+                        <li class="group relative">
+                            <a href="#cart"
+                                class="text-base text-slate-800 py-2 mx-8 flex items-center group-hover:text-red-500">
+                                <img src="./public/img/icon/bag.png" alt="" class="w-6 h-6 mr-2">
+                                <!-- Badge untuk jumlah barang -->
+                                <span
+                                    class="absolute top-0 right-0 mt-1 mr-7 bg-red-500 text-white text-xs font-semibold rounded-full px-1.5 py-0.5">3</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Nav Menu -->
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-64 w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    Home
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    Menu
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    About
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    Contact
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                            <li class="group relative hidden lg:block">
+                                <a href="#cart"
+                                    class="text-base text-slate-800 py-2 mx-8 flex items-center group-hover:text-red-500">
+                                    <img src="./public/img/icon/bag.png" alt="" class="w-6 h-6 mr-2">
+                                    <!-- Badge untuk jumlah barang -->
+                                    <span
+                                        class="absolute top-0 right-0 mt-1 mr-7 bg-red-500 text-white text-xs font-semibold rounded-full px-1.5 py-0.5">3</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="text-base text-slate-800 py-2 mx-8 px-2 flex relative group-hover:bg-red-500 group-hover:text-white rounded-lg transition-all duration-300">
+                                    Login
+                                    <!-- Background kecil di hover -->
+                                    <span
+                                        class="absolute inset-0 w-full h-full bg-red-500 rounded-lg scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 -z-10"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar End -->
+
+
+    <main class="md:w-1/2 mx-auto mt-20">
+        <div class="max-w-full mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+            <!-- Header Invoice -->
+            <div class="flex flex-wrap justify-between items-start border-b pb-4">
+                <div class="w-full sm:w-1/2">
+                    <h1 class="text-2xl font-bold text-gray-800">Nama Restoran</h1>
+                    <p class="text-sm font-medium text-gray-600">Jl. Malioboro, Sosromenduran, Gedong Tengen, Kota Yogyakarta,
+                        Daerah Istimewa Yogyakarta</p>
+                </div>
+                <div class="w-full sm:w-1/2 text-right mt-4 sm:mt-0">
+                    <p class="text-sm text-gray-500">Nama Pelanggan: <span class="font-medium">[Nama Pelanggan]</span></p>
+                    <p class="text-sm text-gray-500">ID Pemesanan: <span class="font-medium">[123456]</span></p>
+                </div>
+            </div>
+        
+            <!-- Rangkuman Produk -->
+            <div class="mt-6">
+                <h2 class="text-lg font-bold mb-4">Rangkuman Produk</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-gray-300 rounded-lg text-sm">
+                        <thead>
+                            <tr class="bg-gray-100 text-gray-700 font-medium">
+                                <th class="border border-gray-300 px-4 py-2 text-left">Nama Produk</th>
+                                <th class="border border-gray-300 px-4 py-2 text-right">Harga Satuan</th>
+                                <th class="border border-gray-300 px-4 py-2 text-center">Quantity</th>
+                                <th class="border border-gray-300 px-4 py-2 text-right">Total Harga</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-4 py-2">Produk Produk A</td>
+                                <td class="px-4 py-2 text-right">Rp 50.000</td>
+                                <td class="px-4 py-2 text-center">2</td>
+                                <td class="px-4 py-2 text-right">Rp 100.000</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2">Produk B</td>
+                                <td class="px-4 py-2 text-right">Rp 25.000</td>
+                                <td class="px-4 py-2 text-center">3</td>
+                                <td class="px-4 py-2 text-right">Rp 75.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Dropdown Rekening -->
+            <div class="mt-6">
+                <label for="payment-method" class="block text-sm font-medium text-gray-700">Pilih Rekening Pembayaran</label>
+                <select id="payment-method"
+                    class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring focus:ring-blue-300">
+                    <option value="mandiri" class="text-sm py-2 px-3">Bank Mandiri (234789043)</option>
+                    <option value="bri" class="text-sm py-2 px-3">Bank BRI (878234311)</option>
+                    <option value="bca" class="text-sm py-2 px-3">Bank BCA (118923563)</option>
+                    <option value="gopay" class="text-sm py-2 px-3">GoPay (082369324922)</option>
+                    <option value="qris" class="text-sm py-2 px-3">QRIS</option>
+                </select>
+            </div>
+        
+            <!-- Total Pembayaran -->
+            <div class="mt-6 space-y-2">
+                <div class="flex justify-between">
+                    <span class="text-sm font-medium text-gray-700">Total Belanja:</span>
+                    <span class="text-sm font-medium text-gray-700">Rp 175.000</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-sm font-medium text-gray-700">Pajak (5%):</span <span
+                        class="text-sm font-medium text-gray-700">Rp 8.750</span>
+                </div>
+                <div class="flex justify-between border-t pt-2">
+                    <span class="text-base md:text-lg font-bold text-gray-800">Total Pembayaran:</span>
+                    <span class="text-base md:text-lg font-bold text-gray-800">Rp 183.750</span>
+                </div>
+            </div>
+        
+            <!-- Tombol Bayar -->
+            <div class="mt-6">
+                <button
+                    class="w-full bg-blue-600 text-white text-sm font-medium py-2 rounded-lg hover:bg-blue-700 transition">Bayar
+                    Sekarang</button>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer Start -->
+    <footer
+        class="bg-slate-800 mt-20 w-full h-[680px] text-slate-100 px-6 text-center grid md:grid-cols-2 lg:grid-cols-4 place-items-center lg:h-72 font-inter">
+        <div class="lg:text-start font-serif">
+            <h2 class="text-xl font-semibold mb-2">My Restaurant</h2>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque soluta tenetur
+                perferendis. Labore alias numquam optio at nostrum ipsa ducimus nam id, commodi quis adipisci!</p>
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2">Our Social</h2>
+            <ul class="grid grid-cols-2 gap-2 lg:grid-cols-none">
+                <li class="inline">
+                    <img src="./public/img/icon/facebook.png" alt="FB" class="inline w-4">
+                    <a href="http://www.facebook.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/instagram.png" alt="IG" class="inline w-4">
+                    <a href="http://www.instagram.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/twitter.png" alt="Twitter" class="inline w-4">
+                    <a href="http://www.twitter.com" class="text-sm">My Restaurant</a>
+                </li>
+                <li class="inline">
+                    <img src="./public/img/icon/tiktok.png" alt="Tiktok" class="inline w-4">
+                    <a href="http://www.tiktok.com" class="text-sm">My Restaurant</a>
+                </li>
+            </ul>
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2">Quick Links</h2>
+            <ul class="grid grid-cols-2 gap-2 lg:grid-cols-none">
+                <li><a href="#" class="text-sm hover:text-red-500">Home</a></li>
+                <li><a href="#about" class="text-sm hover:text-red-500">About</a></li>
+                <li><a href="#menu" class="text-sm hover:text-red-500">Menu</a></li>
+                <li><a href="#" class="text-sm hover:text-red-500">Gallery</a></li>
+                <li><a href="#contact" class="text-sm hover:text-red-500">Contact</a></li>
+            </ul>
+        </div>
+        <div class="font-serif">
+            <h2 class="text-xl font-semibold mb-2 lg:text-start">Location</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1990.509305351088!2d102.2763523930264!3d-3.806055306065295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e36b00c80e634df%3A0x99d9d1ad07a8faab!2sNusa%20Indah%2C%20Kec.%20Ratu%20Agung%2C%20Kota%20Bengkulu%2C%20Bengkulu!5e0!3m2!1sid!2sid!4v1727091062899!5m2!1sid!2sid"
+                width="270" height="140" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+    <script src="./public/js/script.js"></script>
+</body>
+
+</html>
